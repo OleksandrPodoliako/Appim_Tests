@@ -72,6 +72,17 @@ public class MainPage extends BasePageObject {
         return this;
     }
 
+    @Step("Division argumentOne {0}  by zero ")
+    public MainPage divisionByZeroOperation(int argumentOne) {
+        int buttonIndexOne = Utility.transformNumberToButtonIndex(argumentOne);
+        waitTillDisappear(tanLabelLocator);
+        getElementList(buttonListLocator).get(buttonIndexOne).click();
+        getElement(divisionButtonLocator).click();
+        getElementList(buttonListLocator).get(9).click();
+        getElement(equalButtonLocator).click();
+        return this;
+    }
+
 
     public WebElement getResultLabel() {
         return getElement(resultLabelLocator);

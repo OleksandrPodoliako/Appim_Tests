@@ -12,26 +12,12 @@ import java.net.URL;
 
 public class MobileTestRunner {
 
-    protected AppiumDriver appiumDriver;
+    private AppiumDriver appiumDriver;
     protected MainPage mainPage;
 
     @BeforeMethod
     public final void setUp() throws MalformedURLException {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-
-        String applicationPath = System.getProperty("user.dir") + "\\application\\Calculator.apk";
-
-        capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("platformVersion", "9.0");
-        capabilities.setCapability("deviceName", "Android Emulator");
-        capabilities.setCapability("app", applicationPath);
-        capabilities.setCapability("automationName", "UiAutomator2");
-        capabilities.setCapability("avd", "Nexus");
-
-        URL appiumURL = new URL("http://127.0.0.1:4723/wd/hub");
-
-        appiumDriver = new AndroidDriver(appiumURL, capabilities);
-
+        appiumDriver = AppiumDriverFactory.getAppiumDriver("9.0", "Nexus");
         mainPage = new MainPage(appiumDriver);
     }
 

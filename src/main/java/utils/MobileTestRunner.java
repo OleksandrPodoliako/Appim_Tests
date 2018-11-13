@@ -19,10 +19,12 @@ public class MobileTestRunner {
     public final void setUp() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
+        String applicationPath = System.getProperty("user.dir") + "\\application\\Calculator.apk";
+
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("platformVersion", "9.0");
         capabilities.setCapability("deviceName", "Android Emulator");
-        capabilities.setCapability("app", "c:\\Podoliako\\projects\\Appium_Tests\\application\\Calculator.apk");
+        capabilities.setCapability("app", applicationPath);
         capabilities.setCapability("automationName", "UiAutomator2");
         capabilities.setCapability("avd", "Nexus");
 

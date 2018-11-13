@@ -26,9 +26,9 @@ hs_err_pid*
 
 /.gradle/
 /.idea/
-/application/
 /gradle/
 /out/
 /Appium_Tests.iml
 /build/
 /.allure/
+/application/Calculator.apk

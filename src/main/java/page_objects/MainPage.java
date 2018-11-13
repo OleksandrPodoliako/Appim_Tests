@@ -8,9 +8,8 @@ import utils.Utility;
 
 public class MainPage extends BasePageObject {
     private By buttonListLocator = By.xpath("//android.view.ViewGroup[@resource-id = 'com.google.android.calculator:id/pad_numeric']/android.widget.Button");
-    private By sevenButtonLocator = By.id("com.google.android.calculator:id/digit_7");
-    private By nineButtonLocator = By.id("com.google.android.calculator:id/digit_9");
     private By plusButtonLocator = By.id("com.google.android.calculator:id/op_add");
+    private By multiplyButtonLocator = By.id("com.google.android.calculator:id/op_mul");
     private By equalButtonLocator = By.id("com.google.android.calculator:id/eq");
     private By resultLabelLocator = By.id("com.google.android.calculator:id/result");
     private By tanLabelLocator = By.id("com.google.android.calculator:id/fun_tan");
@@ -27,6 +26,19 @@ public class MainPage extends BasePageObject {
         waitTillDisappear(tanLabelLocator);
         getElementList(buttonListLocator).get(buttonIndexOne).click();
         getElement(plusButtonLocator).click();
+        getElementList(buttonListLocator).get(buttonIndexTwo).click();
+        getElement(equalButtonLocator).click();
+        return this;
+    }
+
+    @Step("Multiply argumentOne {0} to argumentTwo {1}")
+    public MainPage multiplyOperation(int argumentOne, int argumentTwo) {
+        int buttonIndexOne = Utility.transformNumberToButtonIndex(argumentOne);
+        int buttonIndexTwo = Utility.transformNumberToButtonIndex(argumentTwo);
+
+        waitTillDisappear(tanLabelLocator);
+        getElementList(buttonListLocator).get(buttonIndexOne).click();
+        getElement(multiplyButtonLocator).click();
         getElementList(buttonListLocator).get(buttonIndexTwo).click();
         getElement(equalButtonLocator).click();
         return this;

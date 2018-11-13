@@ -18,8 +18,10 @@ This tool is developed for studying
 
 #### HOW TO USE:
 
-### All tests :
-
+### All tests:
+1. Run command:  gradle testAll
 
 ### Report :
+1. Run command:  allure generate build/allure-results
+2. Run command:  allure serve build/allure-results
 

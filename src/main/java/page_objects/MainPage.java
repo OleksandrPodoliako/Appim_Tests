@@ -1,6 +1,7 @@
 package page_objects;
 
 import io.appium.java_client.AppiumDriver;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.Utility;
@@ -18,6 +19,7 @@ public class MainPage extends BasePageObject {
         super(appiumDriver);
     }
 
+    @Step("Add argumentOne {0} to argument {1}")
     public MainPage addOperation(int argumentOne, int argumentTwo) {
         int buttonIndexOne = Utility.transformNumberToButtonIndex(argumentOne);
         int buttonIndexTwo = Utility.transformNumberToButtonIndex(argumentTwo);

@@ -20,7 +20,7 @@ public class MainPage extends BasePageObject {
         super(appiumDriver);
     }
 
-    @Step("Add argumentOne {0} to argumentTwo {1}")
+    @Step("Add {0} to {1}")
     public MainPage addOperation(int argumentOne, int argumentTwo) {
         int buttonIndexOne = Utility.transformNumberToButtonIndex(argumentOne);
         int buttonIndexTwo = Utility.transformNumberToButtonIndex(argumentTwo);
@@ -33,7 +33,7 @@ public class MainPage extends BasePageObject {
         return this;
     }
 
-    @Step("Multiply argumentOne {0} to argumentTwo {1}")
+    @Step("Multiply {0} to {1}")
     public MainPage multiplyOperation(int argumentOne, int argumentTwo) {
         int buttonIndexOne = Utility.transformNumberToButtonIndex(argumentOne);
         int buttonIndexTwo = Utility.transformNumberToButtonIndex(argumentTwo);
@@ -46,7 +46,7 @@ public class MainPage extends BasePageObject {
         return this;
     }
 
-    @Step("Subtract argumentOne {0} to argumentTwo {1}")
+    @Step("Subtract {0} to {1}")
     public MainPage subtractOperation(int argumentOne, int argumentTwo) {
         int buttonIndexOne = Utility.transformNumberToButtonIndex(argumentOne);
         int buttonIndexTwo = Utility.transformNumberToButtonIndex(argumentTwo);
@@ -59,7 +59,7 @@ public class MainPage extends BasePageObject {
         return this;
     }
 
-    @Step("Division argumentOne {0} to argumentTwo {1}")
+    @Step("Division {0} to {1}")
     public MainPage divisionOperation(int argumentOne, int argumentTwo) {
         int buttonIndexOne = Utility.transformNumberToButtonIndex(argumentOne);
         int buttonIndexTwo = Utility.transformNumberToButtonIndex(argumentTwo);
@@ -72,7 +72,7 @@ public class MainPage extends BasePageObject {
         return this;
     }
 
-    @Step("Division argumentOne {0}  by zero ")
+    @Step("Division {0}  by zero ")
     public MainPage divisionByZeroOperation(int argumentOne) {
         int buttonIndexOne = Utility.transformNumberToButtonIndex(argumentOne);
         waitTillDisappear(tanLabelLocator);

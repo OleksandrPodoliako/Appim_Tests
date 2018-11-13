@@ -15,7 +15,7 @@ public class MultiplicationTest extends MobileTestRunner{
     @Issue("Calculator_Main_02")
     @Feature("Main functionality")
     @Description("Test verifies that application show right result after multiplication")
-    public final void MultiplicationTest() {
+    public final void multiplicationTest() {
         int argumentOne = Utility.randomNumber();
         int argumentTwo = Utility.randomNumber();
         Integer result = argumentOne * argumentTwo;

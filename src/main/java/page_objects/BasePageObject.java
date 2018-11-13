@@ -13,7 +13,6 @@ public abstract class BasePageObject {
     protected AppiumDriver appiumDriver;
     private WebDriverWait explicitWait;
 
-// TODO To investigate why test are failed with less timeout
     BasePageObject(AppiumDriver appiumDriver){
         this.appiumDriver = appiumDriver;
         this.explicitWait = new WebDriverWait(appiumDriver,10);

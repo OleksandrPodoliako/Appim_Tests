@@ -45,6 +45,6 @@ public final class Utility {
     }
 
     public static int randomNumber(){
-        return ThreadLocalRandom.current().nextInt(0, 10 + 1);
+        return ThreadLocalRandom.current().nextInt(1, 9 + 1);
     }
 }

@@ -11,6 +11,7 @@ public class MainPage extends BasePageObject {
     private By plusButtonLocator = By.id("com.google.android.calculator:id/op_add");
     private By multiplyButtonLocator = By.id("com.google.android.calculator:id/op_mul");
     private By subtractButtonLocator = By.id("com.google.android.calculator:id/op_sub");
+    private By divisionButtonLocator = By.id("com.google.android.calculator:id/op_div");
     private By equalButtonLocator = By.id("com.google.android.calculator:id/eq");
     private By resultLabelLocator = By.id("com.google.android.calculator:id/result");
     private By tanLabelLocator = By.id("com.google.android.calculator:id/fun_tan");
@@ -57,6 +58,20 @@ public class MainPage extends BasePageObject {
         getElement(equalButtonLocator).click();
         return this;
     }
+
+    @Step("Division argumentOne {0} to argumentTwo {1}")
+    public MainPage divisionOperation(int argumentOne, int argumentTwo) {
+        int buttonIndexOne = Utility.transformNumberToButtonIndex(argumentOne);
+        int buttonIndexTwo = Utility.transformNumberToButtonIndex(argumentTwo);
+
+        waitTillDisappear(tanLabelLocator);
+        getElementList(buttonListLocator).get(buttonIndexOne).click();
+        getElement(divisionButtonLocator).click();
+        getElementList(buttonListLocator).get(buttonIndexTwo).click();
+        getElement(equalButtonLocator).click();
+        return this;
+    }
+
 
     public WebElement getResultLabel() {
         return getElement(resultLabelLocator);

@@ -15,7 +15,7 @@ public class SubtractionTest extends MobileTestRunner {
     @Issue("Calculator_Main_03")
     @Feature("Main functionality")
     @Description("Test verifies that application show right result after subtraction")
-    public final void SubtractionTest() {
+    public final void subtractionTest() {
         int argumentOne = Utility.randomNumber();
         int argumentTwo = Utility.randomNumber();
         Integer result = argumentOne - argumentTwo;

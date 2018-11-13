@@ -18,16 +18,18 @@ public class AdditionTest extends MobileTestRunner {
     @Issue("Calculator_Main_01")
     @Feature("Main functionality")
     @Description("Test verifies that application show right result after addition")
-    public final void additionTest(){
+    public final void additionTest() {
         int argumentOne = Utility.randomNumber();
         int argumentTwo = Utility.randomNumber();
         Integer result = argumentOne + argumentTwo;
 
         String resultFromApp = mainPage
-                .addOperation(argumentOne,argumentTwo)
+                .addOperation(argumentOne, argumentTwo)
                 .getResultLabel()
                 .getText();
 
-        assertTrue(resultFromApp.equals(result.toString()),"Addition result is wrong");
+        String errorMessage = String.format("Addition result is wrong. Actual:%1$s Expected: %2$s", resultFromApp, result.toString());
+
+        assertTrue(resultFromApp.equals(result.toString()), errorMessage);
     }
 }

@@ -19,7 +19,7 @@ public class MainPage extends BasePageObject {
         super(appiumDriver);
     }
 
-    @Step("Add argumentOne {0} to argument {1}")
+    @Step("Add argumentOne {0} to argumentTwo {1}")
     public MainPage addOperation(int argumentOne, int argumentTwo) {
         int buttonIndexOne = Utility.transformNumberToButtonIndex(argumentOne);
         int buttonIndexTwo = Utility.transformNumberToButtonIndex(argumentTwo);

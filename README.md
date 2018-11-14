@@ -28,5 +28,6 @@ This tool is developed for studying
 ### Report :
 Local:
 1. Run command:  allure generate build/allure-results
+
 Link
 1. Run command:  allure serve build/allure-results

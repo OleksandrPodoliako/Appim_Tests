@@ -23,8 +23,10 @@ This tool is developed for studying
 ### All tests:
 1. Run command:  gradle testAll(default platformVersion = 9.0, avd = Nexus)*
 
-To specify use properties. gradle testAll -PplatformVersion=9.0 -Pavd=Nexus
+*To specify use properties: gradle testAll -PplatformVersion=9.0 -Pavd=Nexus
 
 ### Report :
+Local:
 1. Run command:  allure generate build/allure-results
-2. Run command:  allure serve build/allure-results
+Link
+1. Run command:  allure serve build/allure-results

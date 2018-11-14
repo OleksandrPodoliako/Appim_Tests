@@ -17,7 +17,7 @@ public class MobileTestRunner {
 
     @BeforeMethod
     public final void setUp() throws MalformedURLException {
-        appiumDriver = AppiumDriverFactory.getAppiumDriver("9.0", "Nexus");
+        appiumDriver = AppiumDriverFactory.getAppiumDriver(System.getProperty("platformVersion"), System.getProperty("avd"));
         mainPage = new MainPage(appiumDriver);
     }
 

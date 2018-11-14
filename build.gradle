@@ -49,6 +49,8 @@ allure {
 }
 
 task testAll(type: Test) {
+    systemProperty 'platformVersion', project.hasProperty('platformVersion') ? project.platformVersion : '9.0'
+    systemProperty 'avd', project.hasProperty('avd') ? project.avd : 'Nexus'
     ignoreFailures = true
     useTestNG()
     options.suites("src/test/resources/suites/all.xml")

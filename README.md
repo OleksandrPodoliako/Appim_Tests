@@ -29,5 +29,5 @@ This tool is developed for studying
 Local:
 1. Run command:  allure generate build/allure-results
 
-Link
+Link:
 1. Run command:  allure serve build/allure-results
